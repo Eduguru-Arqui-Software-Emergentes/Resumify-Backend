@@ -30,7 +30,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         };
     }
 
-    /*@Override
+    @Override
     public List<Usuario> getAllUsuarios(){
         return usuarioRepository.findAll();
     }
@@ -50,6 +50,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         //usuario_updated.setRole(usuario.getRole());
 
         return usuarioRepository.save(usuario_updated);
-    }*/
+    }
 
 }

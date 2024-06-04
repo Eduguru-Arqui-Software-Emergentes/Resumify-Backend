@@ -22,18 +22,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
 
-    /*@Autowired
+    @Autowired
     private UsuarioService usuarioService;
 
     @Autowired
-    private UsuarioMapper usuarioMapper;*/
+    private UsuarioMapper usuarioMapper;
 
     @GetMapping("/hola")
     public ResponseEntity<String> saludoAdmin(){
         return ResponseEntity.ok("Hola Usuario");
     }
 
-    /*@Operation(summary = "Get all users", description = "Get all users")
+    @Operation(summary = "Get all users", description = "Get all users")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Found all users"),
             @ApiResponse(responseCode = "404", description = "users not found")})
@@ -60,6 +60,6 @@ public class UserController {
         return usuarioMapper.toResource(usuarioService.updateUsuario(id,
                 usuarioMapper.toEntity(updateUsuarioResource)));
     }
-    */
+
 
 }
