@@ -42,14 +42,14 @@ public class UserController {
         return usuarioMapper.toResource(usuarioService.getAllUsuarios());
     }
 
-    @Operation(summary = "Create User", description = "Create User")
+    /*@Operation(summary = "Create User", description = "Create User")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Created User"),
             @ApiResponse(responseCode = "404", description = "User not created")})
     @PostMapping("/create")
     public UsuarioResource createUsuario(@RequestBody CreateUsuarioResource createUsuarioResource){
         return usuarioMapper.toResource(usuarioService.createUsuario(usuarioMapper.toEntity(createUsuarioResource)));
-    }
+    }*/
 
     @Operation(summary = "Update User", description = "Update User")
     @ApiResponses(value = {
