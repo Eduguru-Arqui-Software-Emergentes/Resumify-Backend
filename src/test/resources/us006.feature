@@ -1,4 +1,4 @@
-Feature: Como usuario deseo poder registrarme en la aplicacion para poder utilizar sus beneficios
+Feature: Como usuario, quiero poder acceder a la aplicación y al resumen del video desde diferentes dispositivos y plataformas para mayor comodidad y accesibilidad.
 
   Scenario: Registro exitoso de usuario
     Given que el usuario tiene una cuenta de <email>
