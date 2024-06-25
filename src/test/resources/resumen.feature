@@ -18,4 +18,7 @@ Feature: Como usuario deseo poder guardar un resumen de video
   | name                     | content                              | dayAdded     | link                                          |
   | "Primera Guerra Mundial" | "La guerra inicio en el año de 1939" | "19/06/2024" | "https://www.youtube.com/watch?v=sRi0bCjnMFs" |
 
-
+  Scenario: Como usuario listar todos los resumenes guardados
+    Given el usuario quiere ver todos los resumenes gyardados
+    When el usuario ve la lista de resumenes
+    Then la aplicación mostrara todos los reportes guardados
