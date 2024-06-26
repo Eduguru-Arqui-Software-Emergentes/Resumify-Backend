@@ -34,7 +34,8 @@ public class ResumenServiceImpl implements ResumenService {
     @Override
     public Resumen updateResumen(Long id, Resumen resumen) {
         Resumen res = resumenRepository.findById(id).orElseThrow();
-        res.setName(resumen.getName());
+        res.setTitle(resumen.getTitle());
+        res.setThumbnail(resumen.getThumbnail());
         res.setContent(resumen.getContent());
         res.setDayAdded(resumen.getDayAdded());
         res.setLink(resumen.getLink());
@@ -55,6 +56,6 @@ public class ResumenServiceImpl implements ResumenService {
 
     @Override
     public Resumen getByName(String name) {
-        return resumenRepository.findByName(name);
+        return resumenRepository.findByTitle(name);
     }
 }

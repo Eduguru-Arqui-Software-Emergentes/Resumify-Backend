@@ -8,8 +8,7 @@ import java.util.List;
 
 public interface ResumenRepository extends JpaRepository<Resumen, Long> {
 
-    Resumen findByName(String name);
-
+    Resumen findByTitle(String title);
     List<Resumen> findByUsuario(Usuario usuario);
 
 }

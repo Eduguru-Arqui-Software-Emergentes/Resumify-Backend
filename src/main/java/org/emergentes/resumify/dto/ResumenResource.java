@@ -7,7 +7,8 @@ import lombok.Setter;
 @Setter
 public class ResumenResource {
     private Long id;
-    private String name;
+    private String title;
+    private String thumbnail;
     private String content;
     private String dayAdded;
     private String Link;

@@ -1,5 +1,6 @@
 package org.emergentes.resumify.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.emergentes.resumify.request.SignInRequest;
 import org.emergentes.resumify.request.SignUpRequest;
 import org.emergentes.resumify.response.AuthenticationResponse;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@Tag(name = "Autenticación", description = "Autenticación API")
 @RestController
 @RequestMapping("/api/v1/autenticacion")
 @RequiredArgsConstructor

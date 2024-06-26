@@ -16,11 +16,14 @@ public class Resumen {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "title", nullable = false)
+    private String title;
 
     @Column(name = "content", nullable = false)
     private String content;
+
+    @Column(name = "thumbnail", nullable = false)
+    private String thumbnail;
 
     @Column(name = "dayAdded", length = 50, nullable = false)
     private String dayAdded;

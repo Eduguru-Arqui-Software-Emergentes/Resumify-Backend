@@ -14,14 +14,16 @@ public class AuthenticationResponse {
     private String token;
     private String bearer = "Bearer";
     private String userName;
+    private Long userId;
     private String role;
     @JsonIgnore
     private Collection<? extends GrantedAuthority> authorities;
 
-    public AuthenticationResponse(String token, String userName, String role, Collection<? extends GrantedAuthority> authorities) {
+    public AuthenticationResponse(String token, Long userId, String userName, String role, Collection<? extends GrantedAuthority> authorities) {
         this.token = token;
         this.userName = userName;
         this.role = role;
+        this.userId = userId;
         this.authorities = authorities;
     }
 }

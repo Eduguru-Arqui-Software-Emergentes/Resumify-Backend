@@ -64,6 +64,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .orElseThrow(() -> new IllegalArgumentException("Username isn't valid"));
 
         String jwt = jwtService.generateToken(user);
-        return new AuthenticationResponse(jwt, user.getUsername(), user.getRole().name(), user.getAuthorities());
+        return new AuthenticationResponse(jwt, user.getId(), user.getUsername(), user.getRole().name(), user.getAuthorities());
     }
 }

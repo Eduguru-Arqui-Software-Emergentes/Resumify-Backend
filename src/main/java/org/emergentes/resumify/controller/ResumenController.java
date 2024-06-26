@@ -50,7 +50,7 @@ public class ResumenController {
             @RequestBody CreateResumenResource createResumenResource,
             @PathVariable("usuarioId") Long usuarioId
     ){
-        if(resumenRepository.findByName(createResumenResource.getName()) != null){
+        if(resumenRepository.findByTitle(createResumenResource.getTitle()) != null){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Ese Nombre ya existe");
         }else{
             ResumenResource resumenResource = resumenMapper.toResource(
@@ -61,9 +61,15 @@ public class ResumenController {
     }
 
     @Operation(summary = "Get resumen by Name", description = "Get resumen by Name")
-    @GetMapping("name/{name}")
+    @GetMapping("title/{title}")
     public ResumenResource getResumenByName(@PathVariable String name) {
         return resumenMapper.toResource(resumenService.getByName(name));
+    }
+
+    @Operation(summary = "Get resumen by  User Id", description = "Get resumen by User Id")
+    @GetMapping("usuario/{usuarioId}")
+    public List<ResumenResource> getResumenByUserId(@PathVariable Long usuarioId) {
+        return resumenMapper.toResource(resumenService.getAllResumenesByUsuarioId(usuarioId));
     }
 
     public class ResumenAlreadyExistsException extends RuntimeException {
